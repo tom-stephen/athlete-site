@@ -3,7 +3,8 @@ import { ArrowRight, ArrowUpRight, Instagram } from "lucide-react";
 import Reveal from "../components/Reveal";
 import ElevationLine from "../components/ElevationLine";
 import usePageTitle from "../hooks/usePageTitle";
-import { photos, heroStats, profile, results, partners, press, bioFirstPerson } from "../data/site";
+import { photos, heroStats, profile, results, partners, press, bioFirstPerson, featuredVideo } from "../data/site";
+import VideoEmbed from "../components/VideoEmbed";
 
 export default function Home() {
   usePageTitle();
@@ -113,6 +114,26 @@ export default function Home() {
 
         <div className="container-content mt-24">
           <ElevationLine />
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------ Featured video */}
+      <section className="bg-paper py-24 sm:py-28">
+        <div className="container-content">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Watch</p>
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
+              Worth a watch.
+            </h2>
+          </Reveal>
+          <Reveal delay={1} className="mx-auto mt-10 max-w-3xl">
+            <VideoEmbed video={featuredVideo} />
+          </Reveal>
+          <Reveal delay={2} className="mx-auto mt-6 max-w-3xl text-center">
+            <Link to="/media" className="inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-widest2 text-ink-soft transition-colors hover:text-ink">
+              More videos &amp; media kit <ArrowRight size={14} />
+            </Link>
+          </Reveal>
         </div>
       </section>
 

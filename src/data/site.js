@@ -256,6 +256,12 @@ export const press = [
   },
 ];
 
+export const featuredVideo = {
+  title: "Tom Stephen — video",
+  youtubeId: "nSiI3utP_pU",
+  url: "https://www.youtube.com/watch?v=nSiI3utP_pU",
+};
+
 export const video = {
   title: "Tom Stephen — video feature",
   youtubeId: "-TFd0lC9A84",
