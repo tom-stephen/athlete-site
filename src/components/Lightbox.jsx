@@ -11,14 +11,15 @@ export default function Lightbox({ images, index, onClose, onNavigate }) {
     [index, images.length, onClose, onNavigate]
   );
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = "";
-    };
-  }, [handleKey]);
+useEffect(() => {
+  if (index === null) return undefined;
+  document.addEventListener("keydown", handleKey);
+  document.body.style.overflow = "hidden";
+  return () => {
+    document.removeEventListener("keydown", handleKey);
+    document.body.style.overflow = "";
+  };
+}, [handleKey, index]);
 
   if (index === null) return null;
   const img = images[index];

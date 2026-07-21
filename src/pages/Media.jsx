@@ -19,7 +19,7 @@ export default function Media() {
       <PageHeader
         eyebrow="Media"
         title="Media kit."
-        lede="Bio copy, approved photos, and press coverage for journalists, broadcasters, and sponsors. For anything else, reach out on the contact page."
+        lede="Bio copy, photos, and press coverage for journalists, broadcasters, and sponsors. For anything else, reach out on the contact page."
       />
 
       {/* --------------------------------------------------------------- Bio */}
@@ -90,7 +90,7 @@ export default function Media() {
         <div className="container-content">
           <Reveal>
             <p className="eyebrow">Photos</p>
-            <h2 className="mt-4 font-display text-2xl font-bold text-ink sm:text-3xl">Approved images.</h2>
+            <h2 className="mt-4 font-display text-2xl font-bold text-ink sm:text-3xl">Images.</h2>
           </Reveal>
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -116,8 +116,7 @@ export default function Media() {
             ))}
           </div>
           <p className="mt-6 text-[13px] text-ink-faint">
-            Personally owned and approved photography. Please credit where noted; reach out for high-resolution
-            files.
+            Please reach out for credit and usage guidelines if you&rsquo;d like to use any of these images.
           </p>
         </div>
       </section>
