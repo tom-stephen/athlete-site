@@ -23,6 +23,7 @@ import lillsportLogo from "../assets/logos/lillsport.png";
 import jvairLogo from "../assets/logos/jvair.png";
 import aimaLogo from "../assets/logos/aima.png";
 import forbiddenLogo from "../assets/logos/forbidden.png";
+import highwoodLogo from "../assets/logos/highwood.png";
 
 export const photos = {
   heroSprint,
@@ -226,6 +227,12 @@ export const partners = [
     logo: forbiddenLogo,
     blurb: "My mountain bikes for training — high-pivot bikes built in Cumberland, BC.",
     url: "https://forbiddenbike.com/",
+  },
+  {
+    name: "Highwood Adventures",
+    logo: highwoodLogo,
+    blurb:
+      "The generous support from a lifelong Foothills member, allowing me to compete at the highest level.",
   },
 ];
 

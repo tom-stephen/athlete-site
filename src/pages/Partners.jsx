@@ -18,9 +18,12 @@ export default function Partners() {
 
       <section className="bg-paper py-20 sm:py-24">
         <div className="container-content">
-          <div className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid border-l border-t border-line sm:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner) => (
-              <Reveal key={partner.name} className="flex flex-col justify-between bg-paper p-8 sm:p-10">
+              <Reveal
+                key={partner.name}
+                className="flex flex-col justify-between border-b border-r border-line bg-paper p-8 sm:p-10"
+              >
                 <div className="flex h-16 items-start">
                   <img
                     src={partner.logo}
@@ -31,14 +34,16 @@ export default function Partners() {
                 <div className="mt-8">
                   <h2 className="font-display text-lg font-semibold text-ink">{partner.name}</h2>
                   <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">{partner.blurb}</p>
-                  <a
-                    href={partner.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest2 text-ink-faint transition-colors hover:text-red"
-                  >
-                    Visit site <ArrowUpRight size={12} />
-                  </a>
+                  {partner.url ? (
+                    <a
+                      href={partner.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest2 text-ink-faint transition-colors hover:text-red"
+                    >
+                      Visit site <ArrowUpRight size={12} />
+                    </a>
+                  ) : null}
                 </div>
               </Reveal>
             ))}
